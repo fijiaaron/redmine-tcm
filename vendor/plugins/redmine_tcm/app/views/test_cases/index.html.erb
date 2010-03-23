@@ -1,0 +1,30 @@
+
+<div class="tcm">
+		
+	<h2 class="tcm_box"">Test Cases</h2>
+	
+	<p>
+	List of all test cases:
+	</p>
+					
+<%= render :partial => "testcase_list.html.erb" %>
+
+	<br/>
+	<hr/>	
+
+	<%= link_to 'create new test case', {:action => 'new'} %>
+
+</div>
+
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'tcm', :plugin => 'redmine_tcm' %>
+<% end %>
+
+<!-- ----------DEBUG---------- -->
+<pre style="background: #abc; margin: 10px 0px 0 0px; padding: 2px;">
+DEBUG INFO
+</pre>
+<pre style="background: #cde;  margin: 0 0px 10px 0px; padding: 2px;">
+<%= controller.controller_name -%> 
+<%= controller.controller_class_name -%>#<%= controller.action_name -%>
+</pre>

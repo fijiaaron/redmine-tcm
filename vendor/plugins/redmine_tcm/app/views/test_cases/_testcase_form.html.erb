@@ -1,0 +1,78 @@
+<%
+
+title_size = 80
+title_max_length = 200
+description_rows = 25
+description_cols = 60
+
+if controller.action_name == "new"
+	action = "create"
+elsif controller.action_name == "edit"
+	action = "update"
+else
+	#TODO handle unexpected action
+end
+ 
+
+
+%>
+
+<div class="tcm">
+	
+	<% form_for :test_case, @test_case, :url => { :action => action} do |f| %>
+
+		<input type="hidden" name="id" value="<%= @test_case.id %>" />
+		<table class="tcm_testcase_new">
+		<tr>
+			<td>
+				<%= f.label :title, 'Title' %>:
+			</td>
+			<td>
+				<%= f.text_field :title, :class => "tcm_testcase_title", :size => title_size, :maxlength => title_max_length %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= f.label :description, 'Description' %>:
+			</td>
+			<td>
+				<%= f.text_area :description, :class => "wiki-edit", :accesskey => "e", :rows => description_rows, :cols => description_cols %>				
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<%= f.submit "save" %>
+				<input type="reset" value="reset" />
+			</td>
+		</tr>
+	</table>
+	
+	<% end %>
+	
+	<hr/>
+		
+	<%= link_to 'Back', {:action => 'index'} %>
+	
+</div>
+
+
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'tcm', :plugin => 'redmine_tcm' %>
+<% end %>
+
+
+
+<!-- ----------DEBUG---------- -->
+<pre style="background: #abc; margin: 10px 0px 0 0px; padding: 2px;">
+DEBUG INFO
+</pre>
+<pre style="background: #cde;  margin: 0 0px 10px 0px; padding: 2px;">
+
+CONTROLLER
+<%= controller.controller_name -%> 
+<%= controller.controller_class_name -%>#<%= controller.action_name -%>
+
+TEST CASE
+<%= debug @test_case %>
+</pre>

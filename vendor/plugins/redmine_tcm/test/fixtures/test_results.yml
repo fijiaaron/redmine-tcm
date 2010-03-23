@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+
+  run_id: 1
+
+  status: MyString
+
+  pass: false
+
+two:
+  id: 2
+
+  run_id: 1
+
+  status: MyString
+
+  pass: false
+

@@ -1,0 +1,33 @@
+<div class="tcm_list">
+	<table>
+	    <tr>
+	        <th> Title </th>
+	        <th> Description </th>
+	        <th style="width: 50px"> Edit </th>
+	        <th style="width: 50px"> Delete </th>
+	    </tr>
+	    
+	    <% @test_cases.each do |testcase| %>
+	
+	    <tr>
+	        <td> 
+	            <%= testcase[:title] %>
+	        </td>
+	        <td>
+	            <%= testcase[:description] %>
+	        </td>
+			<td>
+				<%= link_to 'show', {:action => 'show', :id => testcase[:id] } %>
+			</td>
+	        <td>
+	            <%= link_to 'edit', {:action => 'edit', :id => testcase[:id] } %>
+	        </td>
+	        <td>
+	            <%= link_to 'delete', {:action => 'delete', :id => testcase[:id] } %>
+	        </td>
+	    </tr>
+	
+	    <% end %>
+	
+	</table>
+</div>

@@ -1,0 +1,31 @@
+
+/**
+.tcm_box  {  
+	background: #eee; 
+	border-width: 1px 1px 2px 1px; 
+	border-style: solid; 
+	border-color: #CCC #BBB #AAA #999; 
+	margin: 5px 0px 5px 0px; 
+	padding: 4px 8px 2px 4px; 
+}
+
+.tcm h1 { font: 18pt Helvetica; font-weight: bold; }
+.tcm h2 { font: 15pt Helvetica; font-weight: bold; }
+.tcm h3 { font: 12pt Helvetica; font-weight: bold; }_---|---10_---|---20_---|---30_---|---40_---|---50_---|---60_---|---70_---|---80
+.tcm h4 { font: 10pt Helvetica; font-weight: bold; }
+**/
+
+.tcm_list table { margin: 5px 2px 4px 2px; padding: 0; border-collapse: collapse; background: #EEE }
+.tcm_list th { border: 1px solid #CCC; margin: 0; padding: 4px 8px 2px 4px; text-align: left; background: #EEE  }
+.tcm_list td { border: 1px solid #CCC; margin: 0; padding: 4px 8px 2px 4px; background: #FFF }
+
+.tcm_testcase_new td { vertical-align: top }
+
+.tcm input { border: 1px solid #777; margin: 1px; font: 10pt Helvetica}
+.tcm input:focus { border: 2px solid #555; margin: 0; background-color: #FDFDF5}
+
+.tcm select { border: 1px solid #777; margin: 1px; font: 10pt Helvetica}
+.tcm select:focus { border: 2px solid #555; margin: 0; background-color: #FDFDF5}
+
+.tcm textarea { overflow: auto; border: 1px solid #777; margin: 1px; font: 10pt Helvetica}
+.tcm textarea:focus { border: 2px solid #555; margin: 0; background-color: #FDFDF5}
